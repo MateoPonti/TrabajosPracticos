@@ -1,6 +1,6 @@
-package unlu.poo.nodo;
+package unlu.poo.pila;
 
-import unlu.poo.pila.Nodo;
+import unlu.poo.nodo.Nodo;
 
 public class Pila {
     private Nodo tope=null;

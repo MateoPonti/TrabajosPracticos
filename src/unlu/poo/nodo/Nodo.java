@@ -1,4 +1,4 @@
-package unlu.poo.pila;
+package unlu.poo.nodo;
 
 public class Nodo {
     private Object dato=null;
