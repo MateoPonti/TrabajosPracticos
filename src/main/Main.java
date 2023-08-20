@@ -2,7 +2,6 @@ package main;
 import unlu.poo.lista.simple.Lista;
 import unlu.poo.pila.Pila;
 
-import java.util.Locale;
 import  java.util.Scanner;
 
 
