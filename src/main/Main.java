@@ -84,7 +84,6 @@ public class Main {
             dejarEspacio();
     }
    pila=null;// la dejo de apuntar asi deja de estar en memoria
-
 }
 
 
