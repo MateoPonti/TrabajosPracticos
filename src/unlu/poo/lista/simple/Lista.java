@@ -98,6 +98,9 @@ public class Lista {
         return false;
     }
 
+    public boolean eliminarFinal(){
+        return eliminar(items);
+    }
     public String toString(){
         Nodo nodoAux= inicio;
         StringBuilder val= new StringBuilder();
