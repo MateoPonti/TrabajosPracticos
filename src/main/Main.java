@@ -111,7 +111,6 @@ public class Main {
                     System.out.println("La lista es:");
                     System.out.println(lista);
                 }
-
             }
             dejarEspacio();
         }
