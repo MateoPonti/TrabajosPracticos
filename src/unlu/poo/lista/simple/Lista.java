@@ -54,7 +54,7 @@ public class Lista {
 
     public Object getElemento(int posicion){
         if ((inicio!=null)&&( (posicion>=1)&&(posicion<=items)) ){
-            if (posicion==0){return  inicio.getDato();}
+            if (1 == posicion){return  inicio.getDato();}
             else {
                 int contador=0;
                 Nodo nodoAux= inicio;
@@ -99,11 +99,11 @@ public class Lista {
 
     public String toString(){
         Nodo nodoAux= inicio;
-        String val="";
+        StringBuilder val= new StringBuilder();
         while (nodoAux!=null){
-            val=val+nodoAux.getDato().toString()+"/n";
+            val.append(nodoAux.getDato().toString()).append("/n");
             nodoAux=nodoAux.getProximo();
         }
-        return  val;
+        return val.toString();
     }
 }

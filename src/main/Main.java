@@ -14,7 +14,7 @@ public class Main {
     }
 
     private static void dejarEspacio()  {
-        System.out.println("");
+        System.out.println();
     }
 
 
@@ -72,7 +72,7 @@ public class Main {
                         }
                         else{
                             System.out.println("No se pudo eliminar, fijese que sea una posicion valida o la lista no este vacia.");
-                        };
+                        }
                     }
                 }
                 case ("3") -> {
@@ -85,18 +85,16 @@ public class Main {
                     }
                     else {
                         System.out.println("No se pudo insertar, fijese que sea una posicion valida o la lista no este vacia.");
-                    };
+                    }
                     System.out.println();
                 }
-                case ("4") -> {
-                    System.out.println("La cantidad de elementos de la lista es : "+lista.getItems());
-                }
+                case ("4") -> System.out.println("La cantidad de elementos de la lista es : "+lista.getItems());
                 case ("5") -> {
                     System.out.println("ingrese posicion:");
                     int posicion= sc.nextInt();
                     Object dato=lista.getElemento(posicion);
                     if (dato!=null){
-                        System.out.println("El elemento de la posicion "+posicion+" es "+dato.toString());
+                        System.out.println("El elemento de la posicion "+posicion+" es "+ dato);
                     }
                     else {
                         System.out.println("Elemento nulo o posicion invalida.");
@@ -111,8 +109,9 @@ public class Main {
                 }
                 case ("7") -> {
                     System.out.println("La lista es:");
-                    System.out.println(lista.toString());
+                    System.out.println(lista);
                 }
+
             }
             dejarEspacio();
         }
