@@ -105,7 +105,7 @@ public class Lista {
         Nodo nodoAux= inicio;
         StringBuilder val= new StringBuilder();
         while (nodoAux!=null){
-            val.append(nodoAux.getDato().toString()).append("/n");
+            val.append(nodoAux.getDato().toString()).append("\n");
             nodoAux=nodoAux.getProximo();
         }
         return val.toString();
