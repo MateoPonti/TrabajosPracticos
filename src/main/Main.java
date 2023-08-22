@@ -2,9 +2,7 @@ package main;
 import unlu.poo.administradorEjercicios.Ejercicio1;
 import unlu.poo.administradorEjercicios.Ejercicio2;
 import unlu.poo.administradorEjercicios.Ejercicio3;
-import unlu.poo.lista.doble.ListaDoble;
-import unlu.poo.lista.simple.Lista;
-import unlu.poo.pila.Pila;
+
 
 import  java.util.Scanner;
 
@@ -37,15 +35,15 @@ public class Main {
         System.out.println("-ingrese 0 para salir");
     }
     private static void mostrarEjercicio1(){
-        Ejercicio1 ejercicio = new Ejercicio1();
+         new Ejercicio1();
     }
 
     private static void mostrarEjercicio2(){
-        Ejercicio2 ejercicio= new Ejercicio2();
+        new Ejercicio2();
     }
 
     private static void mostrarEjercicio3(){
-        Ejercicio3 ejercicio= new Ejercicio3();
+        new Ejercicio3();
 }
 
 }

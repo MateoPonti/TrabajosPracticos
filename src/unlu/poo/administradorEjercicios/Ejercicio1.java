@@ -5,9 +5,8 @@ import unlu.poo.lista.simple.Lista;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    private Lista lista= null;
     public Ejercicio1(){
-        lista= new Lista();
+        Lista lista = new Lista();
         boolean salir= false;
         Scanner sc = new Scanner(System.in);
         System.out.println("ingresar posiciones ordinales, arranca desde el 1");
@@ -80,7 +79,7 @@ public class Ejercicio1 {
                     }
                     System.out.println();
                 }
-                case ("4") -> System.out.println("La cantidad de elementos de la lista es : "+lista.getItems());
+                case ("4") -> System.out.println("La cantidad de elementos de la lista es : "+ lista.getItems());
                 case ("5") -> {
                     System.out.println("ingrese posicion:");
                     entradaValida = false;
@@ -93,7 +92,7 @@ public class Ejercicio1 {
                         } catch (NumberFormatException e) {
                             System.out.println("Error: Ingresa un valor entero válido.");
                         }
-                        Object dato=lista.getElemento(posicion);
+                        Object dato= lista.getElemento(posicion);
                         if (dato!=null){
                             System.out.println("El elemento de la posicion "+posicion+" es "+ dato);
                         }

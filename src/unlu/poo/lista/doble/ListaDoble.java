@@ -1,6 +1,5 @@
 package unlu.poo.lista.doble;
 
-import unlu.poo.nodo.Nodo;
 import unlu.poo.nodo.NodoDoble;
 
 public class ListaDoble {
