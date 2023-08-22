@@ -5,8 +5,9 @@ import unlu.poo.lista.simple.Lista;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    private Lista lista= new Lista();
+    private Lista lista= null;
     public Ejercicio1(){
+        lista= new Lista();
         boolean salir= false;
         Scanner sc = new Scanner(System.in);
         System.out.println("ingresar posiciones ordinales, arranca desde el 1");
@@ -121,7 +122,7 @@ public class Ejercicio1 {
                 }
             }
             System.out.println("\n"+"PRESS ENTER");
-            String palabra = sc.nextLine();
+            sc.nextLine();
             System.out.println();
 
         }

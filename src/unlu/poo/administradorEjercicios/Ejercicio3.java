@@ -5,8 +5,9 @@ import unlu.poo.pila.Pila;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-    private  Pila pila= new Pila();
+    private  Pila pila= null;
      public Ejercicio3(){
+     pila= new Pila();
      boolean salir= false;
      Scanner sc = new Scanner(System.in);
      while (!salir){
@@ -41,7 +42,7 @@ public class Ejercicio3 {
             }
         }
         System.out.println("\n"+"PRESS ENTER");
-        String palabra = sc.nextLine();
+        sc.nextLine();
         System.out.println();
     }
     }

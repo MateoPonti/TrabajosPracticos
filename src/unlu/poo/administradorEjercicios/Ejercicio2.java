@@ -5,8 +5,9 @@ import unlu.poo.lista.doble.ListaDoble;
 import java.util.Scanner;
 
 public class Ejercicio2 {
- private ListaDoble lista= new ListaDoble();
+ private ListaDoble lista= null;
     public Ejercicio2(){
+        lista=new ListaDoble();
         ListaDoble lista= new ListaDoble();
         boolean salir= false;
         Scanner sc = new Scanner(System.in);
@@ -123,7 +124,7 @@ public class Ejercicio2 {
             }
 
             System.out.println("\n"+"PRESS ENTER");
-            String palabra = sc.nextLine();
+            sc.nextLine();
             System.out.println();
         }
     }
