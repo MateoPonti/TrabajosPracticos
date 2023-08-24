@@ -1,9 +1,9 @@
 package unlu.poo.nodo;
 
 public class NodoDoble {
-    private Object dato=null;
-    private NodoDoble proximo=null;
-    private NodoDoble anterior=null;
+    private Object dato;
+    private NodoDoble proximo;
+    private NodoDoble anterior;
 
     public void setProximo(NodoDoble proximo) {
         this.proximo = proximo;

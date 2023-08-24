@@ -22,14 +22,12 @@ public class Ejercicio3 {
                 System.out.println("ingrese palabra:");
                 String palabra = sc.nextLine();
                 pila.apilar(palabra);
+                System.out.println("Dato apilado");
             }
             case ("2") -> {
-                if (pila.estaVacia()) {
-                    System.out.println("La pila ya se encuentra vacia.");
-                } else {
-                    pila.desapilar();
-                    System.out.println("Desapilado correctamente");
-                }
+                Object dato= pila.desapilar();
+                if (!(dato==null)){ System.out.println("El dato desapilado fue: "+dato);}
+                else {System.out.println("La Pila esta Vacia.");}
             }
             case ("3") -> System.out.println(pila.getTope());
             case ("4") -> {
