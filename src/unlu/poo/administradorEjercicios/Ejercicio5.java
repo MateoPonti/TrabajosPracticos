@@ -5,7 +5,6 @@ import unlu.poo.Tarea.Prioridad;
 import unlu.poo.Tarea.Tarea;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Ejercicio5 {
     public Ejercicio5(){
