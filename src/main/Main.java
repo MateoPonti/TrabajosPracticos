@@ -1,8 +1,5 @@
 package main;
-import unlu.poo.administradorEjercicios.Ejercicio1;
-import unlu.poo.administradorEjercicios.Ejercicio2;
-import unlu.poo.administradorEjercicios.Ejercicio3;
-import unlu.poo.administradorEjercicios.Ejercicio4;
+import unlu.poo.administradorEjercicios.*;
 
 
 import  java.util.Scanner;
@@ -27,6 +24,7 @@ public class Main {
                 case ("2") -> new Ejercicio2();
                 case ("3") -> new Ejercicio3();
                 case ("4") -> new Ejercicio4();
+                case ("5") -> new Ejercicio5();
                 default -> System.out.println("No existe esa Opcion.");
             }
             System.out.println();
