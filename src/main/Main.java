@@ -25,6 +25,7 @@ public class Main {
                 case ("3") -> new Ejercicio3();
                 case ("4") -> new Ejercicio4();
                 case ("5") -> new Ejercicio5();
+                case ("6") -> new Ejercicio6();
                 default -> System.out.println("No existe esa Opcion.");
             }
             System.out.println();
