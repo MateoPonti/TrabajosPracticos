@@ -8,6 +8,8 @@ import  java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        System.out.println("---SE RECOMIENDO AMPLIAR LA PANTALLA PARA LEER TODO---");
         arrancarBucle();
     }
 
@@ -27,6 +29,7 @@ public class Main {
                 case ("5") -> new Ejercicio5();
                 case ("6") -> new Ejercicio6();
                 case ("7") -> new Ejercicio7();
+                case("8")  -> new Ejercicio8();
                 default -> System.out.println("No existe esa Opcion.");
             }
             System.out.println();
