@@ -12,16 +12,15 @@ public class Libro {
 
 
     public Libro(String autor, String titulo,int numPaginas,int numEjemplares, int numEjemplaresPrestados ){
+        this(autor,titulo,numPaginas,numEjemplares,numEjemplaresPrestados,"");
+    }
+    public Libro(String autor, String titulo,int numPaginas,int numEjemplares, int numEjemplaresPrestados,String isbn ){
         setAutor(autor);
         setTitulo(titulo);
         setNumPaginas(numPaginas);
         setNumEjemplares(numEjemplares);
         setNumEjemplaresPrestados(numEjemplaresPrestados);
-        this.isbn=null;
-    }
-    public Libro(String autor, String titulo,int numPaginas,int numEjemplares, int numEjemplaresPrestados,String isbn ){
-        this(autor,titulo,numPaginas,numEjemplares,numEjemplaresPrestados);
-        setIsbn(isbn);
+        this.isbn="";
     }
 
     public String getTitulo() {
@@ -60,6 +59,9 @@ public class Libro {
         return numEjemplares;
     }
 
+    public int getNumEjemplaresDisponibles(){
+        return this.numEjemplares-this.numEjemplaresPrestados;
+    }
     public void setNumEjemplares(int numEjemplares) {
         this.numEjemplares=1;
         if (numEjemplares>0){
@@ -71,12 +73,14 @@ public class Libro {
         return numEjemplaresPrestados;
     }
 
-    private void setNumEjemplaresPrestados(int numEjemplaresPrestados) {
+    private boolean setNumEjemplaresPrestados(int numEjemplaresPrestados) {
         this.numEjemplaresPrestados=0;
-        if (numEjemplaresPrestados>0){
+        if ((numEjemplaresPrestados>0) && (getNumEjemplaresDisponibles()>0)){
         this.numEjemplaresPrestados = numEjemplaresPrestados;
         numEjemplaresPrestadosTotal+=numEjemplaresPrestados;
+        return  true;
         }
+        return  false;
     }
 
     public int getNumEjemplaresPrestadosTotal() {
@@ -84,17 +88,32 @@ public class Libro {
     }
 
 
-    public void prestarLibro(){
-        if (numEjemplares>1){
-            numEjemplaresPrestados++;
-            numEjemplaresPrestadosTotal++;
-            numEjemplares--;
+    public boolean prestar(int cant){
+        if (getNumEjemplaresDisponibles()-cant>1){
+            numEjemplaresPrestados+=cant;
+            numEjemplaresPrestadosTotal+=cant;
+            return  true;
         }
+        return  false;
     }
 
     public String toString() {
-        return  "El Libro"+titulo+" creado por el autor "+autor+ " tiene "+numPaginas+" paginas, quedan "+numEjemplares+" disponibles y se prestaron "+numEjemplaresPrestados+".";
+        return  "El Libro "+titulo+" creado por el autor "+autor+ " tiene "+numPaginas+" paginas, quedan "+getNumEjemplaresDisponibles()+" disponible/s y se prestaron "+numEjemplaresPrestados+".";
 
 
+    }
+
+    public boolean devolver(int cant){
+        if ((cant+getNumEjemplaresPrestadosTotal())<=numEjemplares){
+            numEjemplaresPrestados-=cant;
+            numEjemplares+=cant;
+            numEjemplaresPrestadosTotal-=cant;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean tieneMasPaginas(Libro libro2){
+        return this.numPaginas > libro2.getNumPaginas();
     }
 }
