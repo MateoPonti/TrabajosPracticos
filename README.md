@@ -53,19 +53,25 @@ Una tarea es una acción que debe realizarse. Habitualmente todas las tareas que
 Una tarea es una descripción, que además contiene una prioridad y un estado (Si está completa o incompleta). Además, una tarea puede tener una fecha límite. Si la tarea sobrepasa esta fecha y su estado es incompleta, vamos a decir que la tarea está vencida.
 A una tarea, le podemos modificar su descripción, cambiarle la prioridad y avisar que está terminada. Además, podemos querer mostrar la tarea, en cuyo caso muestra la descripción. Pero, si la tarea está terminada, el mensaje debería iniciar con el string "(Vencida)...".
 A una tarea queremos poder preguntarle si se encuentra vencida o no, como así también le podemos consultar si está completa o no.
+
 Se pide:
 
 Generar un diagrama de clase simple de la clase Tarea.
+
 Generar el código en Java que represente la tarea. Debe incluir todos los métodos derivados de la descripción.
+
 Generar un programa en Java que haga uso de la clase Tarea, y cree las siguientes tareas:
 
 "Ir al supermercado mañana". Debe tener la fecha límite establecida y estar incompleta.
+
 "Consultar repuesto del auto". Debe tener la fecha límite para ayer y estar completa.
+
 "Ir al cine a ver la nueva película de Marvel". Debe tener fecha límite de ayer y estar incompleta.
 
 
 
 Este último programa debe configurar el estado especificado en cada objeto, y mostrar sus mensajes respectivos.
+
 Tip: Es posible que deba revisar el funcionamiento de la clase java.time.LocalDate de Java.
 
 Parte dos: Ligas, Asociaciones y Relaciones entre Clases
@@ -118,6 +124,7 @@ Se requiere crear una clase que ayude a realizar operaciones con fechas. Las ope
 Devolver una fecha a partir de un string, con un formato específico. Los formatos pueden ser 2:
 
 dd-MM-yyyy
+
 MM-dd-yyyy
 
 
@@ -155,7 +162,9 @@ Se requiere poder agregar nuevas palabras a cada jugador, siempre y cuando ésta
 Objetivos:
 
   1.Encontrar los objetos que participan del problema.
+  
   2.Definir asociaciones entre los objetos y comportamiento de cada uno.
+  
   3.Desarrollar una clase que cree 2 jugadores. Luego, asignarles palabras a cada uno y, finalmente, determinar cuál es el ganador.
 
 
