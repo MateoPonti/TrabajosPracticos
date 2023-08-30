@@ -16,13 +16,19 @@ Recordando el TAD estudiado en asignaturas previas Lista enlazada simple
 
 Implementar un equivalente orientado a objetos de la Lista enlazada simple. En particular, es necesario que la lista implemente la siguiente interfaz:
 
-Crear lista.
-Consultar si la lista está vacía.
-Consultar la longitud de la lista.
-Agregar elemento al final de la lista.
-Eliminar elemento de la lista.
-Recuperar elemento de la lista.
-Insertar elemento en la lista en una posición específica.
+  1. Crear lista.
+
+  2. Consultar si la lista está vacía.
+
+  3. Consultar la longitud de la lista.
+
+  4. Agregar elemento al final de la lista.
+
+  5. Eliminar elemento de la lista.
+
+  6. Recuperar elemento de la lista.
+
+  7. Insertar elemento en la lista en una posición específica.
 
 
 ¿Cuántos objetos están involucrados? Pensar bien los tipos de retorno de cada método.
@@ -69,8 +75,11 @@ Necesitamos implementar la clase Libro para un sistema de administración de bib
 Objetivos:
 
   1.Definir responsabilidad, estructura y comportamiento de las clases.
+  
   2.Crear una clase que utilice a las anteriores y que cree 2 objetos Libro (los valores que se quieran), mostrarlos por pantalla e indique cuál de los 2 tiene más páginas.
+  
   3.Intentar prestar un libro con 10 ejemplares y uno con 1 solo ejemplar.
+  
   4.Mostrar cantidad total hecha de préstamos.
 
 
@@ -79,6 +88,7 @@ Se requiere implementar una clase que represente y pueda resolver una ecuación 
 Objetivos:
 
   1.Definir estructura y comportamiento.
+  
   2.Crear una clase que utilice a la anterior y que pruebe todos los métodos con varios resultados.
 
 
@@ -87,15 +97,16 @@ Se requiere diseñar un objeto que dando de parámetro una longitud determinada 
 Objetivos:
 
   1.Definir estructura y comportamiento.
+  
   2.Ahora, crear una clase que la use y que:
 
+  Crea una colección de Passwords con el tamaño que se indique por teclado.
+  
+  Muestra todas las claves generadas y si es o no fuerte. Usa este simple formato:
 
-Crea una colección de Passwords con el tamaño que se indique por teclado.
+  <la_contraseña> - Fuerte
 
-
-Muestra todas las claves generadas y si es o no fuerte. Usa este simple formato:
-<la_contraseña> - Fuerte
-<la_contraseña> - Débil
+  <la_contraseña> - Débil
 
 
 
@@ -111,13 +122,16 @@ MM-dd-yyyy
 
 
 Determinar si una fecha se encuentra entre otras dos fechas.
+
 Determinar si una fecha es mayor a otra fecha.
+
 Determinar si una fecha es menor a otra fecha.
 
 Se pueden ayudar del paquete java.time
 Objetivos:
 
   1.Definir estructura y comportamiento.
+  
   2.Crear una clase que la utilice enviando mensajes para probar el correcto funcionamiento.
 
 
@@ -126,6 +140,7 @@ Queremos extender la clase Tarea que tuvimos que desarrollar como ejercicio en l
 Objetivos:
 
   1.Definir estructura y comportamiento.
+  
   2.Implementar los cambios y realizar pruebas para verificar el correcto funcionamiento
 
 
@@ -149,8 +164,11 @@ Necesitamos también crear un administrador de tareas para nuestra lista, que me
 Objetivos:
 
  1.Definir estructura y comportamiento. Implementar.
+ 
  2.Crear una lista de tareas
+ 
  3.Agregar varias tareas y luego marcar algunas como realizadas.
+ 
  4.Agregar algunas tareas con recordatorio mayor a la fecha actual, y algunas con la fecha actual. Luego pedir el listado de tareas e imprimirlas por consola.
 
 
