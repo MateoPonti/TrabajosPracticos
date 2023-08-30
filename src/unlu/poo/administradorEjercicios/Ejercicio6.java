@@ -9,7 +9,7 @@ public class Ejercicio6 {
         Libro libro= new Libro("Juan Enrique", "Remolino", 162,10,0);
         Libro libro2= new Libro("Maria Posiert", "Mi planta de naranja lima", 232,1,0,"13233311");
 
-
+        System.out.println("En este ejercicio se podria plantear la idea de poner la clase Bibilioteca, en mi caso no fue utilizada porque los ej que pedian no era tan requerida como lo podria ser mas a futuro, ésta implementaria la parte administrativa del sistema para prestar y devolver libros o contar los libros totales prestados.");
         System.out.println();
         System.out.println("-"+libro);
         System.out.println();
