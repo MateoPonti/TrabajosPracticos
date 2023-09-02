@@ -11,6 +11,7 @@ public class Tarea {
     private LocalDate fechaFinalizacion;
     private String descripcion;
 
+    private  boolean estaPorVencer; // cree una variabla asi no tengo que llamar cada vez a la funcion y asignar una prioridad alta solamente para saber si esta por vencer
 
 
     public Tarea(String descripcion,Estado estado,Prioridad prioridad,LocalDate fechaLimite,LocalDate fechaRecordatorio){
@@ -19,6 +20,7 @@ public class Tarea {
         this.prioridad=prioridad;
         this.fechaLimite=fechaLimite;
         this.fechaRecordatorio=fechaRecordatorio;
+        calcularPorVencer();
     }
     public Estado getEstado() {
         return estado;
@@ -72,7 +74,21 @@ public class Tarea {
     public String toString() {
         String res= "";
         if (estaVencida()){res+="(Vencida) ";}
+        else {
+         if (getEstaPorVencer()){res+="(Por Vencer) ";}}
+        
         res+=getDescripcion();
         return res;
+    }
+
+
+    public boolean getEstaPorVencer(){
+        return  estaPorVencer;
+    }
+    private void calcularPorVencer() {
+        if  (fechaRecordatorio.isBefore(LocalDate.now())){
+            prioridad=Prioridad.ALTA;
+            this.estaPorVencer=true;
+        }
     }
 }
