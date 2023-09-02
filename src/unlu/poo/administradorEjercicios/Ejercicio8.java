@@ -16,6 +16,7 @@ public class Ejercicio8 {
             System.out.println("0- para salir");
             System.out.println("1- agregar longitud contraseña");
             System.out.println("2- mostrar contraseñas");
+            System.out.println("3- Ejemplo de Fecha para regenerar");
             String option= sc.nextLine();
             switch (option) {
                 case ("0") -> salir = true;
@@ -25,12 +26,22 @@ public class Ejercicio8 {
                         System.out.println("si la longitud no es mayor a 0, se creara por default con 8");
                         contras.agregarContra(val);
                     }
-                    else {
-                        System.out.println("la longitud no es un numero entero");
-                    }
                 }
                 case ("2") -> {
-                    contras.mostrarContras();
+                    String contrasStr= contras.mostrarContras();
+                    System.out.println(contrasStr);
+                }
+                case ("3") -> {
+                    Password contraDebil= new Password();
+                    while ((contraDebil.esContraFuerte())){
+                        contraDebil= new Password(); // Hago una contra debil para asegurar como ejemplo
+                    }
+                    System.out.println(contraDebil.esContraFuerte());
+                    System.out.println("La contra debil es: "+ contraDebil);
+                    System.out.println();
+                    contraDebil.regenerarContraFuerte();
+                    System.out.println("Regenerado queda: "+contraDebil);
+
                 }
             }
             System.out.println();

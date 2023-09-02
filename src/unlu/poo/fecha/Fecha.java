@@ -7,24 +7,21 @@ import java.util.ArrayList;
 
 public class Fecha {
 
-
-
     public static LocalDate devolverFecha(String fecha ){
-        LocalDate fechaObj;
+        LocalDate fechaObj = null;
         ArrayList<DateTimeFormatter> formatos=  new ArrayList<DateTimeFormatter>();
-        formatos.append(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-        formatos.append(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
-
+        formatos.add(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        formatos.add(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
         for (DateTimeFormatter formato: formatos){
             try{
                 fechaObj= LocalDate.parse(fecha, formato);
+                break;
             }
-            catch (DateTimeParseException e){}
-        }
-
-
+            catch (DateTimeParseException e){}}
         return  fechaObj;
     }
+
+
     public static  boolean estaEntre(LocalDate fecha,LocalDate fechaAnterior, LocalDate fechaDespues ){
         return esMayor(fecha,fechaAnterior) && esMenor(fecha,fechaDespues);
     }

@@ -3,7 +3,7 @@ package unlu.poo.password;
 import java.util.Random;
 
 public class Password {
-    private int longitud;
+    private int longitud = 8;
     private String contra;
     public Password(){
     this(8);
@@ -14,7 +14,6 @@ public class Password {
 
     public boolean setLongitud(int longValor){
         boolean longitudValida=false;
-        this.longitud=8;
         if (longValor>0){
             this.longitud=longValor;
             longitudValida=true;
@@ -49,8 +48,7 @@ public class Password {
             if (Character.isLowerCase(contra.charAt(i))){cantMinusculas++;};
             if (Character.isDigit(contra.charAt(i))){cantNumeros++;}
         }
-         if (cantMayusculas>2 && cantMinusculas>1 && cantNumeros>1){return  true;}
-        return  false;
+        return cantMayusculas > 2 && cantMinusculas > 1 && cantNumeros > 1;
     }
 
 
@@ -63,7 +61,9 @@ public class Password {
 
     public void regenerarContraFuerte(){
         if (longitud<7){this.longitud=7;}// longitud minima que sea fuerte 3 mayusculas 2 minusculas 2 numeros = 7
-        while (!esContraFuerte()){crearContra();}
+        while (!esContraFuerte()){
+            crearContra();
+        }
     }
 
     public String getContra(){
