@@ -2,7 +2,7 @@ package unlu.poo.administradorEjercicios;
 
 
 
-import unlu.poo.cola.Cola;
+import unlu.poo.estructuraDatos.cola.Cola;
 
 import java.util.Scanner;
 

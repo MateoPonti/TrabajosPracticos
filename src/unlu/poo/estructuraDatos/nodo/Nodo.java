@@ -1,4 +1,4 @@
-package unlu.poo.nodo;
+package unlu.poo.estructuraDatos.nodo;
 
 public class Nodo {
     private Object dato=null;

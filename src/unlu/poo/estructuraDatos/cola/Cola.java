@@ -1,5 +1,5 @@
-package unlu.poo.cola;
-import unlu.poo.nodo.NodoDoble;
+package unlu.poo.estructuraDatos.cola;
+import unlu.poo.estructuraDatos.nodo.NodoDoble;
 public class Cola {
     private NodoDoble inicio;
     private NodoDoble fin;

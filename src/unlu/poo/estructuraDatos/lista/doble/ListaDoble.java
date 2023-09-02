@@ -1,6 +1,6 @@
-package unlu.poo.lista.doble;
+package unlu.poo.estructuraDatos.lista.doble;
 
-import unlu.poo.nodo.NodoDoble;
+import unlu.poo.estructuraDatos.nodo.NodoDoble;
 
 public class ListaDoble {
     private NodoDoble inicio;

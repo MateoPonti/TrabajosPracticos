@@ -1,6 +1,6 @@
 package unlu.poo.administradorEjercicios;
 
-import unlu.poo.pila.Pila;
+import unlu.poo.estructuraDatos.pila.Pila;
 
 import java.util.Scanner;
 

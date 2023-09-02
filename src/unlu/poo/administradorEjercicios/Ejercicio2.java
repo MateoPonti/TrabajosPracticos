@@ -1,6 +1,6 @@
 package unlu.poo.administradorEjercicios;
 
-import unlu.poo.lista.doble.ListaDoble;
+import unlu.poo.estructuraDatos.lista.doble.ListaDoble;
 
 import java.util.Scanner;
 

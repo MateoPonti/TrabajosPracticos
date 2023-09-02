@@ -1,8 +1,8 @@
 package unlu.poo.administradorEjercicios;
 
-import unlu.poo.Tarea.Estado;
-import unlu.poo.Tarea.Prioridad;
-import unlu.poo.Tarea.Tarea;
+import unlu.poo.tarea.Estado;
+import unlu.poo.tarea.Prioridad;
+import unlu.poo.tarea.Tarea;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package unlu.poo.Tarea;
+package unlu.poo.tarea;
 
 import java.time.LocalDate;
 
@@ -73,7 +73,7 @@ public class Tarea {
         String res= "";
         if (estaVencida()){res+="(Vencida) ";}
         else {
-         if (EstaPorVencer()){res+="(Por Vencer) ";}}
+         if ( fechaRecordatorio!=null && EstaPorVencer()){res+="(Por Vencer) ";}}
         
         res+=getDescripcion();
         return res;

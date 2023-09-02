@@ -1,6 +1,6 @@
-package unlu.poo.lista.simple;
+package unlu.poo.estructuraDatos.lista.simple;
 
-import unlu.poo.nodo.Nodo;
+import unlu.poo.estructuraDatos.nodo.Nodo;
 
 public class Lista {
     private Nodo inicio;
