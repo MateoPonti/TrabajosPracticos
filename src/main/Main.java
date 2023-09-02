@@ -30,6 +30,7 @@ public class Main {
                 case ("6") -> new Ejercicio6();
                 case ("7") -> new Ejercicio7();
                 case("8")  -> new Ejercicio8();
+                case("9")  -> new Ejercicio9();
                 default -> System.out.println("No existe esa Opcion.");
             }
             System.out.println();
