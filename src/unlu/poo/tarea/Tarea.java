@@ -20,44 +20,44 @@ public class Tarea {
         this.fechaLimite=fechaLimite;
         this.fechaRecordatorio=fechaRecordatorio;
     }
-    public Estado getEstado() {
-        return estado;
-    }
 
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
 
-    public Prioridad getPrioridad() {
-        return prioridad;
+    public void finalizar() {
+        this.estado = Estado.COMPLETA;
     }
+    public Estado getEstado() {return estado;}
+
 
     public void setPrioridad(Prioridad prioridad) {
         this.prioridad = prioridad;
     }
-
-    public LocalDate getFechaLimite() {
-        return fechaLimite;
+    public Prioridad getPrioridad() {
+        return prioridad;
     }
+
+
 
     public void setFechaLimite(LocalDate fechaLimite) {
         this.fechaLimite = fechaLimite;
     }
-
-    public LocalDate getFechaRecordatorio() {
-        return fechaRecordatorio;
+    public LocalDate getFechaLimite() {
+        return fechaLimite;
     }
+
 
     public void setFechaRecordatorio(LocalDate fechaRecordatorio) {
         this.fechaRecordatorio = fechaRecordatorio;
     }
-
-    public String getDescripcion() {
-        return descripcion;
+    public LocalDate getFechaRecordatorio() {
+        return fechaRecordatorio;
     }
+
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    public String getDescripcion() {
+        return descripcion;
     }
 
 
