@@ -28,7 +28,7 @@ public class Ejercicio8 {
                     }
                 }
                 case ("2") -> {
-                    String contrasStr= contras.mostrarContras();
+                    String contrasStr= contras.getContras();
                     System.out.println(contrasStr);
                 }
                 case ("3") -> {

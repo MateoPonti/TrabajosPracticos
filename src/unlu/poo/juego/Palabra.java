@@ -1,11 +1,21 @@
 package unlu.poo.juego;
 
+import java.util.Objects;
+
 public class Palabra {
     private String palabra;
+
+
+    public Palabra(String palabra) {
+        this.palabra=palabra;
+    }
     public void setPalabra(String palabra) {
         this.palabra = palabra;
     }
 
+    public String getPalabra() {
+       return  palabra;
+    }
 
     public int calcularPuntaje(){
         Character[] letrasEspeciales = { 'k', 'z', 'x', 'y', 'w', 'q' };
@@ -23,7 +33,7 @@ public class Palabra {
         boolean encontrado=false;
         int i=0;
         while (!encontrado && i< valores.length ){
-            if (valores[i]==val){encontrado=true;}
+            if (Character.toLowerCase(val) == Character.toLowerCase(valores[i])){encontrado=true;}
             i++;
         }
         return encontrado;
@@ -32,5 +42,10 @@ public class Palabra {
     @Override
     public String toString() {
         return palabra;
+    }
+
+    
+    public boolean equals(Palabra palabraComparar) {
+        return palabra.equalsIgnoreCase(palabraComparar.getPalabra());
     }
 }

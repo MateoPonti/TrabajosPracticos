@@ -13,11 +13,11 @@ public class AdmnistradorContra{
         contras.add(contra);
     }
 
-    public String mostrarContras(){
-        String contrasStr ="";
+    public String getContras(){
+        StringBuilder contrasStr = new StringBuilder();
         for (Password contra: contras){
-            contrasStr+=contra.toString()+"\n";
+            contrasStr.append(contra.toString()).append("\n");
         }
-        return contrasStr;
+        return contrasStr.toString();
     }
 }

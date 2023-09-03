@@ -8,8 +8,8 @@ public class Jugador {
     public Jugador(){
         palabras=new ArrayList<Palabra>();
     }
-    public void agregarPalabra(Palabra palabra){
-        palabras.add(palabra);
+    public void agregarPalabra(String palabra){
+        palabras.add(new Palabra(palabra));
     }
 
     public int calcularPuntos(){
@@ -18,5 +18,14 @@ public class Jugador {
             puntos+=palabra.calcularPuntaje();
         }
         return puntos;
+    }
+
+
+    public String getPalabras(){
+        StringBuilder s= new StringBuilder();
+        for (Palabra p : palabras){
+            s.append(p.getPalabra()).append("\n");
+        }
+        return s.toString();
     }
 }

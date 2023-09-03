@@ -10,7 +10,17 @@ public class Diccionario {
         palabras=new ArrayList<Palabra>();
     }
 
-    public void agregarPalabra(Palabra palabra) {
-        palabras.add(palabra);
+    public void agregarPalabra(String palabra) {
+        palabras.add(new Palabra(palabra));
     }
+
+    public boolean estaPalabra(String palabra){
+        Palabra nuevaPalabra= new Palabra(palabra);
+        for(Palabra p: palabras){
+           if (p.equals(nuevaPalabra)) {return  true;}
+           }
+        return false;
+    }
+
+
 }
