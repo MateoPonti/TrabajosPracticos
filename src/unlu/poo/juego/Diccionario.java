@@ -7,7 +7,7 @@ public class Diccionario {
 
 
     public Diccionario(){
-        palabras=new ArrayList<Palabra>();
+        palabras= new ArrayList<>();
     }
 
     public void agregarPalabra(String palabra) {

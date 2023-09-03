@@ -6,7 +6,7 @@ public class Jugador {
     private ArrayList<Palabra> palabras;
 
     public Jugador(){
-        palabras=new ArrayList<Palabra>();
+        palabras= new ArrayList<>();
     }
     public void agregarPalabra(String palabra){
         palabras.add(new Palabra(palabra));

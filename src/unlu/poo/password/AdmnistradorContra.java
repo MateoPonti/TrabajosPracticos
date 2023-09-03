@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class AdmnistradorContra{
 
-    private ArrayList<Password> contras= new ArrayList<Password>();
+    private ArrayList<Password> contras= new ArrayList<>();
 
 
 

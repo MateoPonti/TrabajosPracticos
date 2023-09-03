@@ -3,7 +3,6 @@ package unlu.poo.administradorEjercicios;
 import unlu.poo.password.AdmnistradorContra;
 import unlu.poo.password.Password;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio8 {

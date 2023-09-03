@@ -1,6 +1,5 @@
 package unlu.poo.juego;
 
-import java.util.Objects;
 
 public class Palabra {
     private String palabra;

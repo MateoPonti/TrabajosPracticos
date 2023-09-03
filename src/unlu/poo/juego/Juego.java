@@ -11,7 +11,7 @@ public class Juego {
 
 
     public Juego(){
-        jugadores=new ArrayList<Jugador>();
+        jugadores= new ArrayList<>();
         jugadores.add(new Jugador());
         jugadores.add(new Jugador());
 
