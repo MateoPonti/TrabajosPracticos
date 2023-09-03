@@ -6,7 +6,7 @@ public class Palabra {
 
 
     public Palabra(String palabra) {
-        this.palabra=palabra;
+        this.palabra=palabra.toLowerCase();
     }
     public void setPalabra(String palabra) {
         this.palabra = palabra;

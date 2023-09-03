@@ -58,7 +58,7 @@ public class Juego {
                 "hermano", "hermana", "padre", "madre", "abuelo", "abuela", "niño", "niña", "joven", "adulto",
                 "viejo", "muerte", "vida", "sueño", "pesadilla", "canción", "baile", "pintura", "escultura", "dibujo", "arte",
                 "historia", "geografía", "matemáticas", "ciencia", "física", "química", "biología", "astronomía", "planeta", "estrella",
-                "luz", "color", "forma", "número", "letra", "palabra", "frase", "oración", "párrafo", "texto"
+                "luz", "color", "forma", "número", "letra", "palabra", "frase", "oración", "párrafo", "texto","kiwi", "zapato", "xilófono", "yogur", "walrus", "queso", "quesadilla", "koala", "zebra"
         };
 
         for (String palabra : palabras) {
@@ -75,6 +75,15 @@ public class Juego {
             i++;
         }
         return s.toString();
+    }
+
+    public int calcularGanador(){
+        int puntajeJugador1=jugadores.get(0).calcularPuntos();
+        int puntajeJugador2= jugadores.get(1).calcularPuntos();
+
+        if (puntajeJugador1>puntajeJugador2){return 1;}
+        if (puntajeJugador1<puntajeJugador2){return 2;}
+        return 0;
     }
 
 
