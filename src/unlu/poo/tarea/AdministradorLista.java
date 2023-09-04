@@ -40,7 +40,7 @@ public class AdministradorLista {
         for (Tarea tarea: tareas){
             tareasStr.append(tarea.toString()).append("\n");
         }
-        return contrasStr.toString();
+        return tareasStr.toString();
     }
 
 
