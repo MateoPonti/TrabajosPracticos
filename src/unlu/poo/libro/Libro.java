@@ -102,7 +102,7 @@ public class Libro {
     public boolean devolver(int cant){
         if ((cant+getNumEjemplaresDisponibles())<=numEjemplares){
             numEjemplaresPrestados-=cant;
-            return true;
+            reurn true;
         }
         return false;
     }
