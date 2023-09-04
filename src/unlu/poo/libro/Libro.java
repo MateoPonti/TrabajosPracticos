@@ -1,5 +1,7 @@
 package unlu.poo.libro;
 
+import java.util.Objects;
+
 public class Libro {
     private String titulo;
     private String autor;
@@ -7,7 +9,6 @@ public class Libro {
     private int numPaginas;
     private int numEjemplares;
     private int numEjemplaresPrestados;
-    static private int numEjemplaresPrestadosTotal;
 
 
 
@@ -77,21 +78,16 @@ public class Libro {
         this.numEjemplaresPrestados=0;
         if ((numEjemplaresPrestados>0) && (getNumEjemplaresDisponibles()>0)){
         this.numEjemplaresPrestados = numEjemplaresPrestados;
-        numEjemplaresPrestadosTotal+=numEjemplaresPrestados;
         return  true;
         }
         return  false;
     }
 
-    public int getNumEjemplaresPrestadosTotal() {
-        return numEjemplaresPrestadosTotal;
-    }
 
 
     public boolean prestar(int cant){
         if (getNumEjemplaresDisponibles()-cant>1){
             numEjemplaresPrestados+=cant;
-            numEjemplaresPrestadosTotal+=cant;
             return  true;
         }
         return  false;
@@ -104,9 +100,8 @@ public class Libro {
     }
 
     public boolean devolver(int cant){
-        if ((cant+getNumEjemplaresPrestadosTotal())<=numEjemplares){
+        if ((cant+getNumEjemplaresDisponibles())<=numEjemplares){
             numEjemplaresPrestados-=cant;
-            numEjemplaresPrestadosTotal-=cant;
             return true;
         }
         return false;
@@ -114,5 +109,9 @@ public class Libro {
 
     public boolean tieneMasPaginas(Libro libro2){
         return this.numPaginas > libro2.getNumPaginas();
+    }
+
+    public boolean esAutor(String autor) {
+        return Objects.equals(this.autor, autor);
     }
 }

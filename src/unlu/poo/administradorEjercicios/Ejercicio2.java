@@ -2,6 +2,7 @@ package unlu.poo.administradorEjercicios;
 
 import unlu.poo.estructuraDatos.lista.doble.ListaDoble;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio2 {
@@ -21,6 +22,7 @@ public class Ejercicio2 {
             System.out.println("6-Mostrar si esta Vacia");
             System.out.println("7-Mostrar Lista");
             System.out.println("8-Eliminar Al Final");
+            System.out.println("9-Agregar datos numericos randoms");
             String option= sc.nextLine();
             switch (option) {
                 case ("0") -> salir = true;
@@ -119,6 +121,16 @@ public class Ejercicio2 {
                         System.out.println("La lista esta vacia.");
                     }
                 }
+
+                case ("9") -> {
+                    Random random = new Random();
+
+                    int cantidadNumeros = 5;
+
+                    for (int i = 0; i < cantidadNumeros; i++) {
+                        int numeroAleatorio = random.nextInt(cantidadNumeros);
+                        lista.agregar(numeroAleatorio);
+                    } }
             }
 
             System.out.println("\n"+"PRESS ENTER");

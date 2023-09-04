@@ -23,7 +23,10 @@ public class Tarea {
 
 
     public void finalizar() {
-        this.estado = Estado.COMPLETA;
+        if (this.estado==Estado.INCOMPLETA){
+            this.estado = Estado.COMPLETA;
+            fechaFinalizacion=LocalDate.now();
+        }
     }
     public Estado getEstado() {return estado;}
 
@@ -80,6 +83,9 @@ public class Tarea {
     }
 
 
+    public boolean equals(Tarea obj) {
+        return (descripcion.equals(obj.descripcion)) && (fechaLimite.equals(obj.getFechaLimite())) && (fechaRecordatorio.equals(obj.getFechaRecordatorio()))  && (prioridad==obj.getPrioridad()) && (estado==obj.getEstado());
+    }
 
     public boolean EstaPorVencer() {
         if  (fechaRecordatorio.isBefore(LocalDate.now())){

@@ -4,6 +4,7 @@ package unlu.poo.administradorEjercicios;
 
 import unlu.poo.estructuraDatos.cola.Cola;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -17,6 +18,7 @@ public class Ejercicio4 {
             System.out.println("2-Desencolar Dato");
             System.out.println("3-Mostrar si esta Vacia");
             System.out.println("4- Mostrar cola");
+            System.out.println("5- Encolar Datos enteros randoms");
             String option= sc.nextLine();
             switch (option) {
                 case ("0") -> salir = true;
@@ -39,7 +41,17 @@ public class Ejercicio4 {
                     }
                 }
                 case ("4") -> {
-                    System.out.println(cola.mostrar());
+                    System.out.println(cola);
+                }
+                case ("5") -> {
+                    Random random = new Random();
+
+                    int cantidadNumeros = 5;
+
+                    for (int i = 0; i < cantidadNumeros; i++) {
+                        int numeroAleatorio = random.nextInt(cantidadNumeros);
+                        cola.encolar(numeroAleatorio);
+                    }
                 }
             }
             System.out.println("\n"+"PRESS ENTER");

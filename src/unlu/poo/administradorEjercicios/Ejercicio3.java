@@ -2,6 +2,7 @@ package unlu.poo.administradorEjercicios;
 
 import unlu.poo.estructuraDatos.pila.Pila;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio3 {
@@ -15,6 +16,7 @@ public class Ejercicio3 {
         System.out.println("2-Desapilar Dato");
         System.out.println("3-Mostrar Tope");
         System.out.println("4-Mostrar si esta Vacia");
+         System.out.println("5-Apilar datos numericos randoms");
         String option= sc.nextLine();
         switch (option) {
             case ("0") -> salir = true;
@@ -35,6 +37,16 @@ public class Ejercicio3 {
                     System.out.println("La pila se encuentra Vacia");
                 } else {
                     System.out.println("La pila no esta Vacia.");
+                }
+            }
+            case ("5") -> {
+                Random random = new Random();
+
+                int cantidadNumeros = 5;
+
+                for (int i = 0; i < cantidadNumeros; i++) {
+                    int numeroAleatorio = random.nextInt(cantidadNumeros);
+                    pila.apilar(numeroAleatorio);
                 }
             }
         }

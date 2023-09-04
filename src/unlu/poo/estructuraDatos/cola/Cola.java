@@ -33,7 +33,7 @@ public class Cola {
         }
     }
 
-    public  String mostrar(){
+    public  String toString(){
         StringBuilder cadena= new StringBuilder();
         NodoDoble aux=inicio;
         while(aux!=null){
