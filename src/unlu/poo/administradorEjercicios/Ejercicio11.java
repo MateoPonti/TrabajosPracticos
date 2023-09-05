@@ -21,12 +21,7 @@ public class Ejercicio11 {
 
         System.out.println(juegoAMedias.getJugadores());
 
-        int ganador=juegoAMedias.calcularGanador();
-        if (ganador==0){
-            System.out.println("Es Empate");
-        }
-        else {
-            System.out.println("Gano el jugador "+ganador);
-        }
+        String ganador=juegoAMedias.calcularGanador();
+        System.out.println("Resultado: ");
     }
 }

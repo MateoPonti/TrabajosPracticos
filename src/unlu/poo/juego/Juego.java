@@ -24,8 +24,7 @@ public class Juego {
 
 
     public  boolean agregarPalabraDiccionario(String palabra){
-        if (diccionario.estaPalabra(palabra)){
-            diccionario.agregarPalabra(palabra);
+        if (diccionario.agregarPalabra(palabra)){
             return  true;
         }
         return  false;
@@ -77,13 +76,13 @@ public class Juego {
         return s.toString();
     }
 
-    public int calcularGanador(){
+    public String calcularGanador(){
         int puntajeJugador1=jugadores.get(0).calcularPuntos();
         int puntajeJugador2= jugadores.get(1).calcularPuntos();
 
-        if (puntajeJugador1>puntajeJugador2){return 1;}
-        if (puntajeJugador1<puntajeJugador2){return 2;}
-        return 0;
+        if (puntajeJugador1>puntajeJugador2){return "Ganador Jugador 1";}
+        if (puntajeJugador1<puntajeJugador2){return "Ganador Jugador 2";}
+        return "Empate";
     }
 
 
