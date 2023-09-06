@@ -134,7 +134,7 @@ Objetivos:
   <la_contraseña> - Débil
 
 
-![UMLPassword]([https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20EcuacionGradoDos.png?raw=true)](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20%20Password.png?raw=true)
+![UMLPassword](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20EcuacionGradoDos.png?raw=true)
 
 
 ## Ejercicio 9
