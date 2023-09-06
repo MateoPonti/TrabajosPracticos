@@ -24,21 +24,25 @@ public class AdministradorLista {
         tareas.add(tarea);
     }
 
-    public boolean finalizar(String descripcion){
+    public boolean finalizar(int i){
+        int j=1;
         for (Tarea tarea: tareas){
-            if (tarea.esDescripcion(descripcion)) {
+            if (i==j) {
                 if(tarea.finalizar()){return true;}
             }
+            j++;
         }
         return false;
     }
     public  StringBuilder buscarTarea(String descripcion){
         StringBuilder tareasPorDescripcion = new StringBuilder();
+        int i=1;
         for (Tarea tarea: tareas){
             if (tarea.esDescripcion(descripcion))
             {
-                tareasPorDescripcion.append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");
+                tareasPorDescripcion.append(i).append("- ").append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");
             }
+            i++;
         }
         return tareasPorDescripcion;
     }
@@ -46,16 +50,21 @@ public class AdministradorLista {
 
 
     public String getTareas(){
-        StringBuilder tareasStr = new StringBuilder();
-        for (Tarea tarea: tareas){
-           tareasStr.append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");}
-        return tareasStr.toString();
+       return obtenerTareas(true);
     }
     public String getTareasNoVencidasOrdenadas(){
         ordenarTareas();
+        return obtenerTareas(false);
+    }
+
+    private String obtenerTareas(boolean opcion){ // devuelve un string con todas las tareas o solo las que no estan vencidas segun el bolean
+        ordenarTareas();
         StringBuilder tareasStr = new StringBuilder();
+        int i=1;
         for (Tarea tarea: tareas){
-            if (!tarea.estaVencida()){tareasStr.append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");}
+            if ( opcion  || !tarea.estaVencida()){
+                tareasStr.append(i).append("- ").append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");}
+            i++;
         }
         return tareasStr.toString();
     }
