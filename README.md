@@ -34,7 +34,7 @@ Implementar un equivalente orientado a objetos de la Lista enlazada simple. En p
 ¿Cuántos objetos están involucrados? Pensar bien los tipos de retorno de cada método.
 
 
-![Logo](![Logo](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true))
+![Logo](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true))
 
 ## Ejercicio 2: Lista enlazada doble
 Teniendo implementada la TAD Lista enlazada simple orientada a objetos, implemente la TAD Lista enlazada doble.
