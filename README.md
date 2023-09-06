@@ -1,7 +1,7 @@
+##Trabajo Practico Número 1 
+Alumno: Ponti Mateo Daniel 
+Legajo : 175627
 
-Trabajo Practico 1, Ponti Mateo Daniel , legajo : 175627
-
-El Proyecto presenta el Trabajo Práctico número uno de la asignatura Programación Orientada a Objetos dada en la Universidad Nacional de Luján.
 
 
 ----------------------------------------------------------------------------
