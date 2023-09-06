@@ -37,8 +37,6 @@ Implementar un equivalente orientado a objetos de la Lista enlazada simple. En p
 
 
 ![listaSimple](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true)
-
-
 ![UMLLista](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Lista.png?raw=true)
 
 
@@ -48,7 +46,7 @@ Teniendo implementada la TAD Lista enlazada simple orientada a objetos, implemen
 ¿La interfaz debe ser la misma?
 
 ![listaDoble](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ListaNodoDoble.png?raw=true)
-![UMLListaDoble](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Lista.png?raw=true](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20ListaDoble.png?raw=true)
+![UMLListaDoble](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20ListaDoble.png?raw=true)
 
 
 
