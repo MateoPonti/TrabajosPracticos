@@ -16,31 +16,76 @@ public class AdministradorLista {
 
 
 
-    public agregarTarea(String descripcion, ){
-
-        Tarea tarea= new Tarea()
+    public void agregarTarea(Tarea tarea){
+        tareas.add(tarea);
     }
 
-    public finalizar(String descripcion){
-
-    }
-    public  buscarTarea(String descripcion){
-
+    public boolean finalizar(String descripcion){
         for (Tarea tarea: tareas){
-            if (tarea.getDescripcion().equals(descripcion))
-            {
-
+            if (tarea.esDescripcion(descripcion)) {
+                if(tarea.finalizar()){return true;}
             }
         }
-        return null;
+        return false;
+    }
+    public  StringBuilder buscarTarea(String descripcion){
+        StringBuilder tareasPorDescripcion = new StringBuilder();
+        for (Tarea tarea: tareas){
+            if (tarea.esDescripcion(descripcion))
+            {
+                tareasPorDescripcion.append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");
+            }
+        }
+        return tareasPorDescripcion;
     }
 
+
+
     public String getTareas(){
+        ordenarTareas();
         StringBuilder tareasStr = new StringBuilder();
         for (Tarea tarea: tareas){
-            tareasStr.append(tarea.toString()).append("\n");
+            if (!tarea.estaVencida()){tareasStr.append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");}
         }
         return tareasStr.toString();
+    }
+
+
+
+
+    private void ordenarTareas(){
+
+        int i;
+        boolean salir=false;
+
+        Tarea tarea1;
+        Tarea tarea2;
+
+
+        while (!salir){
+            salir=true;
+            i=1;
+            while (i<tareas.size()){
+                tarea1=tareas.get(i);
+                tarea2=tareas.get(i-1);
+
+                if (tarea1.getPrioridad().ordinal()>tarea2.getPrioridad().ordinal()){
+                    tareas.set(i,tarea2);
+                    tareas.set(i-1,tarea1);
+                    salir=false;
+                }
+                if (tarea1.getPrioridad().ordinal()==tarea2.getPrioridad().ordinal()){
+                        if (tarea1.getFechaLimite().isBefore(tarea2.getFechaLimite())){
+                            tareas.set(i,tarea2);
+                            tareas.set(i-1,tarea1);
+                            salir=false;
+                        }
+                }
+
+                i++;
+            }
+
+        }
     }
 
 

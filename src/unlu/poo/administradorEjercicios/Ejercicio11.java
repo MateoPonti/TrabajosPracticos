@@ -41,6 +41,6 @@ public class Ejercicio11 {
         System.out.println(juegoAMedias.getJugadores());
 
         String ganador=juegoAMedias.calcularGanador();
-        System.out.println("Resultado: ");
+        System.out.println("Resultado: "+juegoAMedias.calcularGanador());
     }
 }

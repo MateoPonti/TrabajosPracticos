@@ -22,11 +22,13 @@ public class Tarea {
     }
 
 
-    public void finalizar() {
+    public boolean finalizar() {
         if (this.estado==Estado.INCOMPLETA){
             this.estado = Estado.COMPLETA;
             fechaFinalizacion=LocalDate.now();
+            return true;
         }
+        return  false;
     }
     public Estado getEstado() {return estado;}
 
@@ -83,8 +85,8 @@ public class Tarea {
     }
 
 
-    public boolean equals(Tarea obj) {
-        return (descripcion.equals(obj.descripcion)) && (fechaLimite.equals(obj.getFechaLimite())) && (fechaRecordatorio.equals(obj.getFechaRecordatorio()))  && (prioridad==obj.getPrioridad()) && (estado==obj.getEstado());
+    public boolean esDescripcion(String descripcion) {
+        return  descripcion.equals(this.descripcion);
     }
 
     public boolean EstaPorVencer() {
