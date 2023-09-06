@@ -29,7 +29,7 @@ public class EcuacionGradoDos {
         this.c=c;
     }
     public ArrayList<Double> calcularRaiz(){
-        ArrayList<Double> raices= new ArrayList<Double>();
+        ArrayList<Double> raices= new ArrayList<>();
         double determinante= Math.pow(b,2)- (4*a*c);
         if (determinante==0){
             raices.add((double) (-b/(2*a)));

@@ -107,8 +107,6 @@ public class Tarea {
 
 
     public String mostrarDetallado(){
-     StringBuilder tareaDetalles=new StringBuilder();
-     tareaDetalles.append(toString()).append(", Prioridad: ").append(getPrioridad()).append(", Fecha Limite: ").append(getFechaLimite().toString());
-     return tareaDetalles.toString();
+        return toString() + ", Prioridad: " + getPrioridad() + ", Fecha Limite: " + getFechaLimite().toString();
     }
     }
