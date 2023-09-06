@@ -14,12 +14,12 @@ public class Tarea {
     private Colaborador colaborador;
 
 
-    public Tarea(String descripcion,Estado estado,Prioridad prioridad,LocalDate fechaLimite){
-        this(descripcion,estado,prioridad,fechaLimite,null);
+    public Tarea(String descripcion,Prioridad prioridad,LocalDate fechaLimite){
+        this(descripcion,prioridad,fechaLimite,null);
     }
-    public Tarea(String descripcion,Estado estado,Prioridad prioridad,LocalDate fechaLimite,LocalDate fechaRecordatorio){
+    public Tarea(String descripcion,Prioridad prioridad,LocalDate fechaLimite,LocalDate fechaRecordatorio){
         this.descripcion=descripcion;
-        this.estado=estado;
+        this.estado=Estado.INCOMPLETA;
         this.prioridad=prioridad;
         this.fechaLimite=fechaLimite;
         this.fechaRecordatorio=fechaRecordatorio;

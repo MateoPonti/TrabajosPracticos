@@ -9,28 +9,35 @@ import java.util.ArrayList;
 public class AdministradorLista {
 
     ArrayList<Tarea> tareas;
+    ArrayList<Colaborador> colaboradores;
 
 
     public AdministradorLista(){
         tareas= new ArrayList<>();
+        colaboradores= new ArrayList<>();
     }
 
 
-    public void crearTarea(String descripcion, Estado estado, Prioridad prioridad, LocalDate fechaLimite){
-        crearTarea(descripcion,estado,prioridad,fechaLimite,null);
+    public void crearTarea(String descripcion, Prioridad prioridad, LocalDate fechaLimite){
+        crearTarea(descripcion,prioridad,fechaLimite,null);
     }
-    public void crearTarea(String descripcion, Estado estado, Prioridad prioridad, LocalDate fechaLimite, LocalDate fechaRecordatorio){
-        Tarea tarea= new Tarea(descripcion,estado,prioridad,fechaLimite,fechaRecordatorio);
+    public void crearTarea(String descripcion, Prioridad prioridad, LocalDate fechaLimite, LocalDate fechaRecordatorio){
+        Tarea tarea= new Tarea(descripcion,prioridad,fechaLimite,fechaRecordatorio);
         tareas.add(tarea);
     }
 
-    public boolean finalizar(int i, Colaborador colaborador){
+    public boolean finalizar(int i, String nombre){
         int j=1;
+        int posicionColaborador=buscarColaboradores(nombre);
+        boolean buscarColaborador=posicionColaborador!=-1;
+        if (buscarColaborador){
         for (Tarea tarea: tareas){
             if (i==j) {
-                if(tarea.finalizar(colaborador)){return true;}
+                return tarea.finalizar(colaboradores.get(posicionColaborador));
+
             }
             j++;
+        }
         }
         return false;
     }
@@ -106,8 +113,49 @@ public class AdministradorLista {
         }
     }
 
-    public boolean agregarColaborador(){
+    public boolean agregarColaborador(String nombre){
+        boolean estaColaborador= buscarColaboradores(nombre)!=-1;
+        if (!estaColaborador){colaboradores.add(new Colaborador(nombre));}
+        return !estaColaborador;
+    }
+
+    public boolean eliminarColaborador(String nombre){
+        int posicion= buscarColaboradores(nombre);
+        if (posicion!=-1){
+            colaboradores.remove(posicion);
+            return true;
+        }
         return false;
     }
+
+    private int buscarColaboradores(String nombre){
+        int posicion=0;
+        for (Colaborador c:colaboradores){
+            if (c.compararNombre(nombre)){return  posicion;}
+            posicion++;
+        }
+        return -1;
+    }
+    
+    public String mostrarTareasPorColaborador(String nombre){
+        StringBuilder colaboradorString=new StringBuilder();
+        for (Colaborador c:colaboradores){
+            if (c.compararNombre(nombre)){
+                colaboradorString.append("Nombre del Colaborador: ").append(c).append("\n").append(c.getTareas());
+            }
+        }
+        return colaboradorString.toString();
+    }
+
+    public String getColaboradores(){
+        StringBuilder colaboradorString=new StringBuilder();
+        colaboradorString.append("Colaboradores").append("\n");
+        for (Colaborador c:colaboradores){
+            colaboradorString.append(c).append("\n");
+        }
+        return colaboradorString.toString();
+    }
+
+
 
 }
