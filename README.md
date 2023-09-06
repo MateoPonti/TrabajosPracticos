@@ -1,4 +1,4 @@
-![image](https://github.com/MateoPonti/TrabajosPracticos/assets/63692136/bbddfa9e-126a-4e8c-bb13-c2cdd2c40e62)## Trabajo Práctico Número Uno
+## Trabajo Práctico Número Uno
 
 Alumno: Ponti Mateo Daniel 
 
