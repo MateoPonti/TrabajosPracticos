@@ -115,6 +115,8 @@ Objetivos:
   2.Crear una clase que utilice a la anterior y que pruebe todos los métodos con varios resultados.
 
 
+![UMLEcuacionGradoDos](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20EcuacionGradoDos.png?raw=true)
+
 ## Ejercicio 8
 Se requiere diseñar un objeto que dando de parámetro una longitud determinada genera un password aleatorio. Por defecto, la longitud será de 8, pero existe la posibilidad que se requiera una longitud más larga. En ambos casos, genera una contraseña aleatoria con esa longitud automáticamente ante su creación. Además, se requiere saber si el password es fuerte. Considere que una contraseña fuerte es aquella que tiene más de 2 mayúsculas, más de 1 minúscula y al menos dos números. En caso de que la contraseña no sea fuerte, debe existir alguna forma de regenerarla y asegurarse de que el password sea fuerte. En cualquier caso, debo poder obtener la contraseña y su longitud, y poder cambiar su longitud.
 Objetivos:
@@ -132,7 +134,7 @@ Objetivos:
   <la_contraseña> - Débil
 
 
-
+![UMLPassword]([https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20EcuacionGradoDos.png?raw=true)](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20%20Password.png?raw=true)
 
 
 ## Ejercicio 9
@@ -158,6 +160,7 @@ Objetivos:
   
   2.Crear una clase que la utilice enviando mensajes para probar el correcto funcionamiento.
 
+![UMLFecha](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Fecha.png?raw=true)
 
 ## Ejercicio 10
 Queremos extender la clase Tarea que tuvimos que desarrollar como ejercicio en la clase introductoria. Ahora se les puede establecer una fecha de recordatorio a las tareas, si esa fecha de recordatorio es mayor o igual a la fecha actual entonces las tareas se van a imprimir con el prefijo “(por vencer)”. Además, si la tarea se encuentra próxima a vencer (fecha posterior o igual a la del recordatorio) la prioridad sube a la más alta.
@@ -166,6 +169,9 @@ Objetivos:
   1.Definir estructura y comportamiento.
   
   2.Implementar los cambios y realizar pruebas para verificar el correcto funcionamiento
+
+  
+![UMLTareaEj10](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20TareaEj10.png?raw=true)
 
 
 ## Ejercicio 11
@@ -185,6 +191,11 @@ Objetivos:
   3.Desarrollar una clase que cree 2 jugadores. Luego, asignarles palabras a cada uno y, finalmente, determinar cuál es el ganador.
 
 
+![UMLJuego](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20JuegoPalabras.png?raw=true)
+
+como se aclara en el uml , la clase juego esta hecha mas que nada para testear en la clase "AdministradorEJ11" , ya que no tiene muchas consideraciones que tendria para un juego.
+
+
 ## Ejercicio 12
 Necesitamos también crear un administrador de tareas para nuestra lista, que me permita crear nuevas tareas y agregarlas a una lista. Se necesita que retorne la lista de tareas no vencidas ordenadas primero según la prioridad y luego según la fecha de vencimiento. Debe permitir la búsqueda de tareas por título, y dada una tarea poder marcarla como realizada.
 Objetivos:
@@ -197,10 +208,13 @@ Objetivos:
  
  4.Agregar algunas tareas con recordatorio mayor a la fecha actual, y algunas con la fecha actual. Luego pedir el listado de tareas e imprimirlas por consola.
 
+![UMLTareaEJ12](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20TareaEj12.png?raw=true)
+
 
 ## Ejercicio 13
 Seguimos extendiendo el ToDoList, se agregan nuevas funcionalidades. Ahora las tareas pueden resolverlas varias personas, por lo cual una lista de tareas puede tener varios colaboradores y una tarea, cuando se marca finalizada, será realizada por un colaborador. Cuando la tarea se marca finalizada debería registrar la fecha de finalización. Se debe poder obtener un listado de las tareas realizadas por un colaborador.
 
+![UMLTareaEJ13](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20TareaEj13.png?raw=true)
 ## Autor 
 
 - [@MateoPonti](https://www.github.com/MateoPonti)
