@@ -8,6 +8,8 @@ public class Tarea {
     private LocalDate fechaLimite;
     private LocalDate fechaRecordatorio;
 
+
+
     private LocalDate fechaFinalizacion;
     private String descripcion;
 
@@ -36,7 +38,9 @@ public class Tarea {
     }
     public Estado getEstado() {return estado;}
 
-
+    public LocalDate getFechaFinalizacion() {
+        return fechaFinalizacion;
+    }
     public void setPrioridad(Prioridad prioridad) {
         this.prioridad = prioridad;
     }
