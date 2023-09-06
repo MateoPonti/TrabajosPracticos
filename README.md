@@ -36,13 +36,21 @@ Implementar un equivalente orientado a objetos de la Lista enlazada simple. En p
 ¿Cuántos objetos están involucrados? Pensar bien los tipos de retorno de cada método.
 
 
-![Logo](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true)
+![listaSimple](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true)
+
+
+![listaDoble](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true)
+
+
 
 ## Ejercicio 2: Lista enlazada doble
 Teniendo implementada la TAD Lista enlazada simple orientada a objetos, implemente la TAD Lista enlazada doble.
 
 ¿La interfaz debe ser la misma?
-![Logo](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ListaNodoDoble.png?raw=true)
+
+![UMLLista](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Lista.png?raw=true)
+
+
 
 ## Ejercicio 3: Pila
 Implemente el TAD Pila. Defina cuál debe ser la interfaz a implementar; cuantos objetos están involucrados en la solución; responsabilidades de cada objeto involucrado y ejemplifique el uso.
