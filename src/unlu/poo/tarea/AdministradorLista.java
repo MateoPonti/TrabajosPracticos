@@ -24,11 +24,11 @@ public class AdministradorLista {
         tareas.add(tarea);
     }
 
-    public boolean finalizar(int i){
+    public boolean finalizar(int i, Colaborador colaborador){
         int j=1;
         for (Tarea tarea: tareas){
             if (i==j) {
-                if(tarea.finalizar()){return true;}
+                if(tarea.finalizar(colaborador)){return true;}
             }
             j++;
         }
@@ -40,7 +40,7 @@ public class AdministradorLista {
         for (Tarea tarea: tareas){
             if (tarea.esDescripcion(descripcion))
             {
-                tareasPorDescripcion.append(i).append("- ").append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");
+                tareasPorDescripcion.append(i).append("- ").append(tarea.mostrarDetallado()).append("\n");
             }
             i++;
         }
@@ -63,14 +63,11 @@ public class AdministradorLista {
         int i=1;
         for (Tarea tarea: tareas){
             if ( opcion  || !tarea.estaVencida()){
-                tareasStr.append(i).append("- ").append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");}
+                tareasStr.append(i).append("- ").append(tarea.mostrarDetallado()).append("\n");
             i++;
-        }
+        }}
         return tareasStr.toString();
     }
-
-
-
 
     private void ordenarTareas(){
 
@@ -109,5 +106,8 @@ public class AdministradorLista {
         }
     }
 
+    public boolean agregarColaborador(){
+        return false;
+    }
 
 }

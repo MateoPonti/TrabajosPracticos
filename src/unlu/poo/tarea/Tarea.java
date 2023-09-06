@@ -11,6 +11,7 @@ public class Tarea {
     private LocalDate fechaFinalizacion;
     private String descripcion;
 
+    private Colaborador colaborador;
 
 
     public Tarea(String descripcion,Estado estado,Prioridad prioridad,LocalDate fechaLimite){
@@ -25,10 +26,12 @@ public class Tarea {
     }
 
 
-    public boolean finalizar() {
+    public boolean finalizar(Colaborador colaborador) {
         if (this.estado==Estado.INCOMPLETA){
             this.estado = Estado.COMPLETA;
             fechaFinalizacion=LocalDate.now();
+            this.colaborador=colaborador;
+            colaborador.agregarTarea(this);
             return true;
         }
         return  false;
@@ -99,4 +102,14 @@ public class Tarea {
         }
         return  false;
     }
-}
+
+    public Colaborador getColaborador(){
+        return colaborador;
+    }
+
+    public String mostrarDetallado(){
+     StringBuilder tareaDetalles=new StringBuilder();
+     tareaDetalles.append(toString()).append(", Prioridad: ").append(getPrioridad()).append(", Fecha Limite: ").append(getFechaLimite().toString());
+     return tareaDetalles.toString();
+    }
+    }
