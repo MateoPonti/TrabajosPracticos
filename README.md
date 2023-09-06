@@ -37,9 +37,6 @@ Implementar un equivalente orientado a objetos de la Lista enlazada simple. En p
 
 
 ![listaSimple](https://github.com/MateoPonti/TrabajosPracticos/blob/main/listaNodoSimple.png?raw=true)
-
-
-
 ![UMLLista](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Lista.png?raw=true)
 
 
@@ -49,6 +46,7 @@ Teniendo implementada la TAD Lista enlazada simple orientada a objetos, implemen
 ¿La interfaz debe ser la misma?
 
 ![listaDoble](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ListaNodoDoble.png?raw=true)
+![UMLListaDoble](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Lista.png?raw=true](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20ListaDoble.png?raw=true)
 
 
 
@@ -56,9 +54,10 @@ Teniendo implementada la TAD Lista enlazada simple orientada a objetos, implemen
 
 ## Ejercicio 3: Pila
 Implemente el TAD Pila. Defina cuál debe ser la interfaz a implementar; cuantos objetos están involucrados en la solución; responsabilidades de cada objeto involucrado y ejemplifique el uso.
-
+![UMLPila](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Pila.png?raw=true)
 ## Ejercicio 4: Cola
 Implemente el TAD Cola. Defina cuál debe ser la interfaz a implementar; cuantos objetos están involucrados en la solución; responsabilidades de cada objeto involucrado y ejemplifique el uso.
+![UMLCola](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Cola.png?raw=true)
 
 ## Ejercicio 5: Lista de Tareas
 Una tarea es una acción que debe realizarse. Habitualmente todas las tareas que tenemos pendientes las ponemos en una lista, y en la medida que las vamos cumpliendo, las vamos "tachando". Queremos empezar a construir una app que gestione esta lista de tareas.
