@@ -22,6 +22,9 @@ public class Ejercicio12 {
         lista.crearTarea("Comprar pan", Prioridad.MEDIA,LocalDate.of(2026,5,5),LocalDate.of(24,10,7));
         lista.crearTarea("Ir a clases", Prioridad.ALTA,LocalDate.of(2022,12,8),LocalDate.of(2022,11,7));
 
+        lista.agregarColaborador("Juan");// esto es del ejercicio 13 pero necesito hacerlo para poder testear el finalizar
+        lista.finalizar(1,"Juan");
+
         System.out.println("Tareas de Test antes de su ordenamiento: ");
         System.out.println(lista.getTareas());
 

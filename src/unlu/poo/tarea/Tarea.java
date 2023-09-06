@@ -11,7 +11,6 @@ public class Tarea {
     private LocalDate fechaFinalizacion;
     private String descripcion;
 
-    private Colaborador colaborador;
 
 
     public Tarea(String descripcion,Prioridad prioridad,LocalDate fechaLimite){
@@ -27,10 +26,9 @@ public class Tarea {
 
 
     public boolean finalizar(Colaborador colaborador) {
-        if (this.estado==Estado.INCOMPLETA){
+        if (!estaCompleta()){
             this.estado = Estado.COMPLETA;
             fechaFinalizacion=LocalDate.now();
-            this.colaborador=colaborador;
             colaborador.agregarTarea(this);
             return true;
         }
@@ -84,7 +82,7 @@ public class Tarea {
         String res= "";
         if (estaVencida()){res+="(Vencida) ";}
         else {
-         if ( fechaRecordatorio!=null && EstaPorVencer()){res+="(Por Vencer) ";}}
+         if ( fechaRecordatorio!=null && estaPorVencer()){res+="(Por Vencer) ";}}
         
         res+=getDescripcion();
         return res;
@@ -95,7 +93,7 @@ public class Tarea {
         return  descripcion.equals(this.descripcion);
     }
 
-    public boolean EstaPorVencer() {
+    public boolean estaPorVencer() {
         if  (fechaRecordatorio.isBefore(LocalDate.now())){
             prioridad=Prioridad.ALTA;
             return  true;
@@ -103,9 +101,6 @@ public class Tarea {
         return  false;
     }
 
-    public Colaborador getColaborador(){
-        return colaborador;
-    }
 
     public String mostrarDetallado(){
      StringBuilder tareaDetalles=new StringBuilder();

@@ -14,11 +14,13 @@ public class EcuacionGradoDos {
             setC(c);
     }
 
-    public void setA(int a){
+    public boolean setA(int a){
         this.a=1;
-        if (a>0){
+        if (a!=0){
             this.a=a;
+            return true;
         }
+        return false;
     }
     public void setB(int b){
         this.b=b;

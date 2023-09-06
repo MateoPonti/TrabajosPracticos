@@ -1,7 +1,6 @@
 package unlu.poo.tarea;
 
-import unlu.poo.juego.Palabra;
-import unlu.poo.password.Password;
+
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -91,8 +90,8 @@ public class AdministradorLista {
             while (i<tareas.size()){
                 tarea1=tareas.get(i);
                 tarea2=tareas.get(i-1);
-                tarea1.toString(); // actualiza la prioridad en caso de que este por vencer
-                tarea2.toString();// actualiza la prioridad en caso de que este por vencer
+                tarea1.estaPorVencer(); // actualiza la prioridad en caso de que este por vencer
+                tarea2.estaPorVencer();// actualiza la prioridad en caso de que este por vencer
 
                 if (tarea1.getPrioridad().ordinal()>tarea2.getPrioridad().ordinal()){
                     tareas.set(i,tarea2);
