@@ -36,6 +36,7 @@ public class Cola {
     public  String toString(){
         StringBuilder cadena= new StringBuilder();
         NodoDoble aux=inicio;
+        // De manera sencilla lo hice como si mostrara una cola pero por naturaleza deberia ir encolando y desencolando hasta su tamaño (asi se autorecorre y puede mostrar los valores)
         while(aux!=null){
             cadena.append(aux.getDato()).append("\n");
             aux=aux.getProximo();

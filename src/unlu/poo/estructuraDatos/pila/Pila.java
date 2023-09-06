@@ -35,4 +35,5 @@ public class Pila {
         return tope==null;
     }
 
+    //No se hizo un mostrar por no ser una responsabilidad de una pila el mostrar , ya que necesitarias al menos otra pila , lo mismo con su cantidad de elementos
 }

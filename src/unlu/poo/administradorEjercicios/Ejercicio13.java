@@ -37,6 +37,7 @@ public class Ejercicio13 {
         System.out.println(lista.getColaboradores());
 
 
+        System.out.println(lista.getTareas());
         System.out.println();
         System.out.println("Mateo finaliza la tarea 1,2 y 3 ");
         lista.finalizar(1,colaborador2);
@@ -46,6 +47,7 @@ public class Ejercicio13 {
         System.out.println("Mostramos la lista realizado por el colaborador Mateo");
         System.out.println(lista.mostrarTareasPorColaborador(colaborador2));
 
+        System.out.println("Se puede observar que la tarea 1 no pudo finalizarse por Mateo porque ya estaba vencida");
 
     }
 }

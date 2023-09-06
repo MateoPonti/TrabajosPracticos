@@ -28,7 +28,7 @@ public class Tarea {
 
 
     public boolean finalizar(Colaborador colaborador) {
-        if (!estaCompleta()){
+        if (!estaCompleta() && !estaVencida()){
             this.estado = Estado.COMPLETA;
             fechaFinalizacion=LocalDate.now();
             colaborador.agregarTarea(this);
