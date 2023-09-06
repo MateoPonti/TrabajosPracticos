@@ -68,6 +68,8 @@ public class AdministradorLista {
             while (i<tareas.size()){
                 tarea1=tareas.get(i);
                 tarea2=tareas.get(i-1);
+                tarea1.toString(); // actualiza la prioridad en caso de que este por vencer
+                tarea2.toString();// actualiza la prioridad en caso de que este por vencer
 
                 if (tarea1.getPrioridad().ordinal()>tarea2.getPrioridad().ordinal()){
                     tareas.set(i,tarea2);
