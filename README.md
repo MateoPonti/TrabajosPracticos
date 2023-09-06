@@ -85,7 +85,12 @@ Este último programa debe configurar el estado especificado en cada objeto, y m
 
 Tip: Es posible que deba revisar el funcionamiento de la clase java.time.LocalDate de Java.
 
+
+![UMLTarea](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20TareaEj5.png?raw=true)
+
+
 Parte dos: Ligas, Asociaciones y Relaciones entre Clases
+
 
 ## Ejercicio 6
 Necesitamos implementar la clase Libro para un sistema de administración de bibliotecas y todas las clases relacionadas que correspondan. Generalmente las búsquedas se hacen por Título o Autor, es casi imposible que quieran buscar un libro por ISBN y en ciertos casos no se tiene el dato para completarlo. Si solo queda un Ejemplar disponible, no se puede prestar el libro porque tiene que quedar disponible para consultar dentro de la biblioteca. El sistema debería mostrar la descripción del libro como: El libro <su_titulo> creado por el autor <su_autor> tiene <num_paginas> páginas, quedan <num_ejemplares> disponibles y se prestaron <num_ejemplares_prestados>. También se necesita determinar la cantidad de préstamos realizados, teniendo en cuenta todos los libros disponibles.
@@ -99,6 +104,7 @@ Objetivos:
   
   4.Mostrar cantidad total hecha de préstamos.
 
+![UMLLibro](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20EjLibro.png?raw=true)
 
 ## Ejercicio 7
 Se requiere implementar una clase que represente y pueda resolver una ecuación de segundo grado. Dada una ecuación de 2do grado de la forma y = a * x^2 + b * x + c, la fórmula para el cálculo de las raíces es (-b ± √((b^2) - (4 * a * c))) / (2 * a). Una vez que se crea una instancia de la clase no se podrán modificar sus coeficientes. Recordar que puede darse el caso donde exista una única raíz y para que esto ocurra el discriminante ((b^2) - 4 * a * c) debe ser igual a 0. En este último caso, en vez de retornar 2 raíces se debería retornar una sola. Existe el caso también donde necesitemos calcular el valor de y en base al valor de x, que se pasa como parámetro.
