@@ -11,9 +11,9 @@ public class Ejercicio5 {
 
         LocalDate fecha1= LocalDate.of(2001,10,23);
         LocalDate fecha2= LocalDate.now().minusDays(1);
-        Tarea tarea1= new Tarea("Ir al supermercado mañana", Estado.INCOMPLETA, Prioridad.ALTA,fecha1,null);
-        Tarea tarea2= new Tarea("Consultar repuesto del auto", Estado.COMPLETA, Prioridad.BAJA,fecha2,null);
-        Tarea tarea3= new Tarea("Ir al supermercado mañana", Estado.INCOMPLETA, Prioridad.MEDIA,fecha2,null);
+        Tarea tarea1= new Tarea("Ir al supermercado mañana", Estado.INCOMPLETA, Prioridad.ALTA,fecha1);
+        Tarea tarea2= new Tarea("Consultar repuesto del auto", Estado.COMPLETA, Prioridad.BAJA,fecha2);
+        Tarea tarea3= new Tarea("Ir al supermercado mañana", Estado.INCOMPLETA, Prioridad.MEDIA,fecha2);
 
 
         System.out.println("Descripcion : "+tarea1+" , Fecha Limite : "+tarea1.getFechaLimite()+" , Estado:"+tarea1.getEstado());

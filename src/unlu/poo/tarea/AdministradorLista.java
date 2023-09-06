@@ -3,6 +3,7 @@ package unlu.poo.tarea;
 import unlu.poo.juego.Palabra;
 import unlu.poo.password.Password;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AdministradorLista {
@@ -15,8 +16,11 @@ public class AdministradorLista {
     }
 
 
-
-    public void agregarTarea(Tarea tarea){
+    public void crearTarea(String descripcion, Estado estado, Prioridad prioridad, LocalDate fechaLimite){
+        crearTarea(descripcion,estado,prioridad,fechaLimite,null);
+    }
+    public void crearTarea(String descripcion, Estado estado, Prioridad prioridad, LocalDate fechaLimite, LocalDate fechaRecordatorio){
+        Tarea tarea= new Tarea(descripcion,estado,prioridad,fechaLimite,fechaRecordatorio);
         tareas.add(tarea);
     }
 
@@ -42,6 +46,12 @@ public class AdministradorLista {
 
 
     public String getTareas(){
+        StringBuilder tareasStr = new StringBuilder();
+        for (Tarea tarea: tareas){
+           tareasStr.append(tarea).append(", Prioridad: ").append(tarea.getPrioridad()).append(", Fecha Limite: ").append(tarea.getFechaLimite().toString()).append("\n");}
+        return tareasStr.toString();
+    }
+    public String getTareasNoVencidasOrdenadas(){
         ordenarTareas();
         StringBuilder tareasStr = new StringBuilder();
         for (Tarea tarea: tareas){

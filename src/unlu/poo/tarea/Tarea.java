@@ -13,6 +13,9 @@ public class Tarea {
 
 
 
+    public Tarea(String descripcion,Estado estado,Prioridad prioridad,LocalDate fechaLimite){
+        this(descripcion,estado,prioridad,fechaLimite,null);
+    }
     public Tarea(String descripcion,Estado estado,Prioridad prioridad,LocalDate fechaLimite,LocalDate fechaRecordatorio){
         this.descripcion=descripcion;
         this.estado=estado;
