@@ -1,4 +1,4 @@
-## Trabajo Practico Número 1 
+## Trabajo Práctico Número Uno
 
 Alumno: Ponti Mateo Daniel 
 
