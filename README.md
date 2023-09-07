@@ -94,7 +94,10 @@ Tip: Es posible que deba revisar el funcionamiento de la clase java.time.LocalDa
 
 En la implementacion tiene agregadas los metodos y atributos del ejercicio 10,12 y 13 por lo tanto no sera tan fiel al UML.
 
-Parte dos: Ligas, Asociaciones y Relaciones entre Clases
+
+
+
+## Parte dos: Ligas, Asociaciones y Relaciones entre Clases
 
 
 ## Ejercicio 6
