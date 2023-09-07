@@ -31,9 +31,9 @@ public class Ejercicio8 {
                     System.out.println(contrasStr);
                 }
                 case ("3") -> {
-                    Password contraDebil= new Password();
+                    Password contraDebil= new Password(7);
                     while ((contraDebil.esContraFuerte())){
-                        contraDebil= new Password(); // Hago una contra debil para asegurar como ejemplo
+                        contraDebil= new Password(7); // Hago una contra debil para asegurar como ejemplo
                     }
                     System.out.println(contraDebil.esContraFuerte());
                     System.out.println("La contra debil es: "+ contraDebil);
