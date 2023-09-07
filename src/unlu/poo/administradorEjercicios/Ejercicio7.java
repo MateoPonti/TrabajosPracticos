@@ -24,6 +24,7 @@ public class Ejercicio7 {
         System.out.println("El resultado de Y de la ecuacion "+ecuacion+" es : "+ecuacion.resolverEcuacion(3));
         System.out.println();
 
+
         System.out.println("--------------------------------------------");
         ecuacion = new EcuacionGradoDos(-2,-2,0);
         System.out.println(ecuacion);
