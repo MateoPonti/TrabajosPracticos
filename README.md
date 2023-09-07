@@ -218,7 +218,7 @@ Objetivos:
 
 ![UMLTareaEJ12](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20TareaEj12.png?raw=true)
 
-Para poder testear se utilizo un colaborador , ya que necesita crearse uno porque esta implementando la misma clase que se utiliza en la clase 13
+Para poder testear se utilizo un colaborador , ya que necesita crearse uno para poder dar finalizado una tarea, ya que utiliza la misma clase que el ejercicio 13
 
 ## Ejercicio 13
 Seguimos extendiendo el ToDoList, se agregan nuevas funcionalidades. Ahora las tareas pueden resolverlas varias personas, por lo cual una lista de tareas puede tener varios colaboradores y una tarea, cuando se marca finalizada, será realizada por un colaborador. Cuando la tarea se marca finalizada debería registrar la fecha de finalización. Se debe poder obtener un listado de las tareas realizadas por un colaborador.
