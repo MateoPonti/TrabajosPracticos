@@ -55,6 +55,9 @@ Teniendo implementada la TAD Lista enlazada simple orientada a objetos, implemen
 ## Ejercicio 3: Pila
 Implemente el TAD Pila. Defina cuál debe ser la interfaz a implementar; cuantos objetos están involucrados en la solución; responsabilidades de cada objeto involucrado y ejemplifique el uso.
 ![UMLPila](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Pila.png?raw=true)
+
+
+
 ## Ejercicio 4: Cola
 Implemente el TAD Cola. Defina cuál debe ser la interfaz a implementar; cuantos objetos están involucrados en la solución; responsabilidades de cada objeto involucrado y ejemplifique el uso.
 ![UMLCola](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20Cola.png?raw=true)
@@ -193,7 +196,7 @@ Objetivos:
 
 ![UMLJuego](https://github.com/MateoPonti/TrabajosPracticos/blob/main/ImagenesUML/uml%20JuegoPalabras.png?raw=true)
 
-como se aclara en el uml , la clase juego esta hecha mas que nada para testear en la clase "AdministradorEJ11" , ya que no tiene muchas consideraciones que tendria para un juego.
+Como se aclara en el UML , la clase juego esta hecha mas que nada para testear en la clase "AdministradorEJ11" , ya que no tiene muchas consideraciones que tendria para un juego.
 
 
 ## Ejercicio 12
